@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Number 1</th>
+                <th>Number 2</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for calculation in calculations %}
+            <tr>
+                <td>{{ calculation[0] }}</td>
+                <td>{{ calculation[1] }}</td>
+                {% if results %}
+                <td>{{ results[loop.index0] }}</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button onclick="location.href='/';">Add New</button>
+</body>
+</html>

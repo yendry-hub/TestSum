@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Calculator</title>
+</head>
+<body>
+    <h1>Sum Calculator</h1>
+    <form action="/add_data" method="post">
+        <label for="num1">Enter first number:</label>
+        <input type="text" id="num1" name="num1">
+        <br>
+        <label for="num2">Enter second number:</label>
+        <input type="text" id="num2" name="num2">
+        <br>
+        <button type="submit" onclick="addData()">Add Data</button>
+        <button type="button" onclick="calculateSum()">Calculate Sum</button>
+        <button type="button" onclick="calculateSub()">Calculate Sub</button>
+    </form>
+
+    <script>
+        function addData() {
+            // Get the values of num1 and num2
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+
+            // Display an alert message
+            alert('Data added successfully!');
+        }
+
+        function calculateSum() {
+            // Redirect to the calculate_sum route
+            window.location.href = "/calculate_sum";
+        }
+
+        function calculateSub() {
+            // Redirect to the sub.py script
+            window.location.href = "/calculate_sub";
+        }
+    </script>
+</body>
+</html>
